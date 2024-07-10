@@ -200,14 +200,14 @@ h1, h2 {
     display: flex;
     gap: 2rem;
 }
-
+/*
 .red__git::before {
-    content: url(../img/brand-github.svg);
+    content: url(../src/brand-github.svg);
 }
 
 .red__link::before {
-    content: url(../img/brand-linkedin.svg);
-}
+    content: url(../src/brand-linkedin.svg);
+} */
 
 .hide {
     display: none;
@@ -225,22 +225,22 @@ h1, h2 {
 .dark .warning__info {
     color: var(--color-principal);
 }
-
+/*
 .dark .warning__sign{
-    content: url(../img/signo-exclamacion-blanco.png);
-}
+    content: url(../src/signo-exclamacion-blanco.png);
+} */
 
 .dark .footer__info {
     color: var(--color-principal);
 }
-
+/*
 .dark .red__git::before {
-    content: url(../img/brand-github-blanco.svg);
+    content: url(../src/brand-github-blanco.svg);
 }
 
 .dark .red__link::before {
     content: url(../img/brand-linkedin-blanco.svg);
-}
+} */
 
 .dark .button--encrypt {
     background-color: var(--dark-secundario);
