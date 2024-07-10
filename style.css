@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-principal: #f1f0ec;
+    --color-secundario: #950101;
+    --color-terciario: #b4ac9c;
+    --color-resultado: grey;
+
+    --dark-primario: #1d1717;
+    --dark-secundario: #950101;
+    --dark-terciario: #E7D4B5;
+    --dark-resultado: #372b2b;
+
+    --transicion: background-color 0.3s ease, color 0.3s ease; 
+
+
+    --fnt-principal: "Montserrat", sans-serif;
+    --fnt-secundaria: "Inter", sans-serif;
+}
+
+/* Generales */
+
+html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: var(--color-principal);
+    margin: 1.5rem auto;
+    max-width: 1400px;
+    transition: var(--transicion);
+}
+
+
+p {
+    font-family: var(--fnt-secundaria);
+
+}
+
+h1, h2 {
+    font-family: var(--fnt-principal);
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    gap: 2rem;
+}
+
+.header__img:hover {
+    cursor: pointer;
+}
+
+
+/* Main */
+.main {
+    display: flex;   
+    gap: 3rem;
+}
+
+
+/* Main--Section */
+
+#content__text{
+    margin: 0rem 2.5rem;
+    width: 45rem;
+    height: 20rem;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    resize: none;
+    font-family: var(--fnt-secundaria);
+    font-size: 1.1rem;
+}
+
+#content__text::placeholder {
+    color: var(--color-secundario);
+    font-weight: 600;
+}
+
+.content__warning {
+    margin: 0rem 2.5rem 1rem 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+
+.warning__sign {
+    width: 1rem;
+    height: 1rem;
+}
+
+.warning__info {
+    font-size: .8rem;
+}
+
+.content__button {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.button {
+    text-align: center;
+    width: 15.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    font-family: var(--fnt-secundaria);
+}
+
+.button--encrypt {
+    background-color: var(--color-secundario);
+    color: #FFFFFF;
+}
+
+.button--decrypt{
+    background-color: var(--color-terciario);
+}
+
+.button--copy {
+    background-color: var(--color-principal);
+    margin-top: auto;
+}
+
+
+.button--encrypt:hover,
+.button--decrypt:hover,
+.button--copy:hover {
+    cursor: pointer;
+}
+
+/* Main--Aside */
+
+.aside{
+    box-shadow: 1px 1px 10px 1px #dad9d5;
+    height: 25rem;
+    margin: 0rem 2.5rem;
+    padding: 1.2rem;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 1.5rem;
+}
+
+#resultado {
+    font-family: var(--fnt-principal);
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--color-resultado);
+    width: 25rem;
+    height: 20rem;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.content--alert {
+    border: 1px solid #000000;
+    margin-top: 3.83rem;
+    background-color: #9CDBA6;
+    text-align: center;
+    width: 17.5rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    font-family: var(--fnt-secundaria);
+}
+
+.aside__img {
+    width: 15rem;
+    height: auto;
+}
+
+
+/* Footer */ 
+
+.footer {
+    margin: 2rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.footer__red{
+    display: flex;
+    gap: 2rem;
+}
+
+.red__git::before {
+    content: url(../img/brand-github.svg);
+}
+
+.red__link::before {
+    content: url(../img/brand-linkedin.svg);
+}
+
+.hide {
+    display: none;
+}
+
+
+
+/* Modo Oscuro */
+
+.dark {
+    background-color: var(--dark-primario);
+}
+
+.dark .header__title, 
+.dark .warning__info {
+    color: var(--color-principal);
+}
+
+.dark .warning__sign{
+    content: url(../img/signo-exclamacion-blanco.png);
+}
+
+.dark .footer__info {
+    color: var(--color-principal);
+}
+
+.dark .red__git::before {
+    content: url(../img/brand-github-blanco.svg);
+}
+
+.dark .red__link::before {
+    content: url(../img/brand-linkedin-blanco.svg);
+}
+
+.dark .button--encrypt {
+    background-color: var(--dark-secundario);
+}
+
+.dark .button--decrypt {
+    background-color: var(--dark-terciario);
+}
+
+.dark .button--copy {
+    background-color: var(--dark-primario);
+}
+
+.dark #content__text,
+.dark #content__text::placeholder,
+.dark #resultado,
+.dark .aside {
+    background-color: var(--dark-resultado);
+    color: var(--color-principal);
+}
+
+.dark .aside {
+    box-shadow: 1px 1px 10px 1px #0e0e0e;
+}
+
+.dark .content--alert {
+    border: 1px solid #000000;
+    background-color: #68a371;
+    color: #000000;
+}
+
+
+
+/* Media Querys */
+@media (max-width: 768px ) {
+    
+    html {
+        display: block;
+    }
+
+    .header {
+        justify-content: center;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    #content__text {
+        max-width: 85%;
+    }
+
+
+    .aside {
+        max-width: 85%;
+    }
+
+    #resultado {
+        width: 35rem;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    #content__text {
+        margin: 0 1rem;
+    }
+
+    .content__button {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .button {
+        width: 85%;
+    }
+
+    #resultado {
+        width: 15rem;
+    }
+    
+}
+
+@media (max-width: 376px) {
+    .header__img {
+        width: 20%;
+    }
+
+    #content__text {
+        margin: 0 .8rem;
+    }
+
+}
